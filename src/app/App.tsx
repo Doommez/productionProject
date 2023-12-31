@@ -6,15 +6,15 @@ import { useTheme } from "app/providers/themeProvider";
 import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { AppRouter } from "app/providers/router/ui/AppRouter";
+import { Navbar } from "widgets/Navbar/ui/Navbar";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button onClick={toggleTheme}>TOGGLE</button>
-      <Link to={"/"}>MainPage</Link>
-      <Link to={"/about"}>AboutPage</Link>
+      <Navbar />
       <AppRouter></AppRouter>
+      <button onClick={toggleTheme}>TOGGLE</button>
       {/* <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path={"/about"} element={<AboutPage />} />
