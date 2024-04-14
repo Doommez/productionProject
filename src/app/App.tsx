@@ -7,14 +7,14 @@ import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { AppRouter } from "app/providers/router/ui/AppRouter";
 import { Navbar } from "widgets/Navbar/ui/Navbar";
-
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
       <AppRouter></AppRouter>
-      <button onClick={toggleTheme}>TOGGLE</button>
+      <ThemeSwitcher />
       {/* <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path={"/about"} element={<AboutPage />} />
