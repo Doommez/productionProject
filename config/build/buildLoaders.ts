@@ -37,7 +37,7 @@ function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   const fileLoader = {
-    test: /\.(png|jpe?g|gif)$/i,
+    test: /\.(png|jpe?g|gif|woff2)$/i,
     use: [
       {
         loader: "file-loader",
