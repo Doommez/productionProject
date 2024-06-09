@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { classNames } from "shared/lib/classNames";
 import cls from "./Navbar.module.scss";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
 interface NavbarProps {
   className?: string;
@@ -17,10 +18,10 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
           to={"/"}
           className={cls.mainLink}
         >
-          MainPage
+          Главная
         </AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={"/about"}>
-          AboutPage
+        <AppLink theme={AppLinkTheme.RED} to={"/about"}>
+          О сайте
         </AppLink>
       </div>
     </div>
