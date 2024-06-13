@@ -9,6 +9,20 @@ import { Suspense } from "react";
 
 const Component = () => {
   const { t, i18n } = useTranslation();
+  console.log(i18n);
+
+  return (
+    <div>
+      <button
+        onClick={() =>
+          i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru")
+        }
+      >
+        {t("перевод")}
+      </button>
+      {t("Тестовый перевод")}
+    </div>
+  );
 };
 const App = () => {
   const { theme } = useTheme();
@@ -18,6 +32,7 @@ const App = () => {
         <Navbar />
         <div className="content-page">
           <SideBar />
+          <Component />
           <AppRouter></AppRouter>
         </div>
       </Suspense>
