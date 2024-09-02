@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { BuildOptions } from "./type/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 function buildPlugins({
   paths,
@@ -18,6 +19,8 @@ function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV: JSON.stringify(true),
     }),
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(),
   ];
 }
 
