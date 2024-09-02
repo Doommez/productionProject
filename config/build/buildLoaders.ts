@@ -58,6 +58,7 @@ function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             {
               locales: ["ru", "en"],
               keyAsDefaultValue: true,
+              ///plugins
             },
           ],
         ],
