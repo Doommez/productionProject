@@ -6,9 +6,6 @@ interface EditorPageProps {
   className?: string;
 }
 
-export const EditorPage: FC<EditorPageProps> = ({ className }) => {
-  return (
-    <div className={classNames(cls.EditorPage, {}, [className])}>
-    </div>
+export const EditorPage: FC<EditorPageProps> = ({ className }) => (
+    <div className={classNames(cls.EditorPage, {}, [className])} />
   );
-};
