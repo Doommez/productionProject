@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', "i18next"],
   rules: {
     'react/jsx-indent': [0, 2],
     'react/jsx-indent-props': [0, 2],
@@ -35,6 +35,7 @@ module.exports = {
     quotes: ['error', 'single'],
     'linebreak-style': ['error', 'windows'],
     'comma-dangle': ['error', 'never'],
+    'i18next/no-literal-string': ['error', {markupOnly: true}]
   },
   globals: {
     __IS_DEV__: true,

@@ -2,9 +2,9 @@
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "flat",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "eslint.codeActionsOnSave.rules": null,
   "files.autoSaveWorkspaceFilesOnly": false,
@@ -12,5 +12,16 @@
   "editor.formatOnType": false,
   "editor.codeActionsOnSave": {
   "source.fixAll.eslint": "always"
-}
+},
+"[scss]": {
+  "editor.defaultFormatter": "stylelint.vscode-stylelint"
+},
+"scss.format.enable": true,
+"editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always"
+  },
+  "eslint.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
 }
