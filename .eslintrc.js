@@ -33,7 +33,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     quotes: ['error', 'single'],
-    'linebreak-style': ['error', 'windows'],
+    "linebreak-style": 0,
     'comma-dangle': ['error', 'never'],
     'i18next/no-literal-string': ['error', {markupOnly: true}]
   },
