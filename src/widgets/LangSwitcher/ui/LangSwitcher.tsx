@@ -5,22 +5,26 @@ import { useTranslation } from 'react-i18next';
 import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
-  const { t, i18n } = useTranslation();
-  console.log(i18n);
+    const {
+        t,
+        i18n
+    } = useTranslation();
+    console.log(i18n);
 
-  const toggle = () => i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    const toggle = () => i18n.changeLanguage(i18n.language === 'ru'
+        ? 'en' : 'ru');
 
-  return (
-    <Button
-      themeButton={ThemeButton.CLEAR}
-      className={classNames(cls.LangSwitcher, {}, [className])}
-      onClick={toggle}
-    >
-      {t('Язык')}
-    </Button>
-  );
+    return (
+        <Button
+            themeButton={ThemeButton.CLEAR}
+            className={classNames(cls.LangSwitcher, {}, [className])}
+            onClick={toggle}
+        >
+            {t('Язык')}
+        </Button>
+    );
 };
