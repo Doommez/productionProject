@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
+import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import App from './app/App';
 import { ThemeProvider } from './app/providers/themeProvider';
 
@@ -10,8 +11,12 @@ const root = createRoot(container);
 
 root.render(
     <BrowserRouter>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
+        <ErrorBoundary>
+
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </ErrorBoundary>
+
     </BrowserRouter>
 );

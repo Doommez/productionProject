@@ -38,8 +38,10 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', {
-            ignoreComments: true
-        }]
+            ignoreComments: true,
+            code: 88
+        }],
+        'react/prop-types': 'off'
     },
     globals: {
         __IS_DEV: true
