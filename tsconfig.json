@@ -11,12 +11,21 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
-    }
+      "*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "jest",
+      "testing-library/jest-dom"
+    ]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts"
+  ]
 }
