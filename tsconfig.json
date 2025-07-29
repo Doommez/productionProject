@@ -17,7 +17,7 @@
     },
     "types": [
       "jest",
-      "testing-library/jest-dom"
+      "@testing-library/jest-dom"
     ]
   },
   "ts-node": {
@@ -26,6 +26,6 @@
     }
   },
   "include": [
-    "./config/jest/setupTests.ts"
+    "config/jest/setupTests.ts"
   ]
 }

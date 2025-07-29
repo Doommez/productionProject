@@ -4,6 +4,7 @@
  */
 
 import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
     // All imported modules in your tests should be mocked automatically
@@ -56,7 +57,13 @@ const config: Config = {
     testMatch: [
         '<rootDir>src/**/*(*.)+(spec|test).[tj]s?(x)'
     ],
-
+    modulePaths: [
+        '<rootDir>src'
+    ],
+    moduleNameMapper: {
+        '\\.(s?css)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, './jestEmptyComponent.tsx')
+    },
     // In jest.config.js add (if you haven't already)
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
 
