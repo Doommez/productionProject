@@ -2,3 +2,6 @@
 /build
 /.idea
 /coverage
+
+*storybook.log
+storybook-static

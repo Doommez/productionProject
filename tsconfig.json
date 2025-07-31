@@ -3,12 +3,16 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "es5",
+    "target": "es2015",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "baseUrl": ".",
     "paths": {
       "*": [
@@ -28,6 +32,7 @@
   "include": [
     "config/jest/setupTests.ts",
     "**/*.d.ts",
-    "src"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ]
 }
