@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import 'app/styles/index.scss';
 
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/themeProvider';
 import { Button, ThemeButton } from './Button';
 
 const meta = {
@@ -14,12 +16,14 @@ const meta = {
         themeButton: {
             control: 'select',
             options: Object.values(ThemeButton)
+
         },
         children: {
             control: 'text'
         },
         onClick: { action: 'clicked' }
-    }
+    },
+    decorators: [ThemeDecorator(Theme.LIGHT)]
 } satisfies Meta<typeof Button>;
 
 export default meta;
