@@ -12,6 +12,9 @@ const meta = {
         layout: 'centered'
     },
     tags: ['autodocs'],
+    args: {
+        children: 'link'
+    },
     argTypes: {
         theme: {
             control: 'select',
@@ -25,5 +28,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Dark: Story = {
+    args: {
+        title: 'asdfsadf',
+        to: 'https://google.com'
+    },
     decorators: [ThemeDecorator(Theme.DARK)]
 };
