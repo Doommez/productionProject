@@ -1,0 +1,485 @@
+{
+  "v": 5,
+  "entries": {
+    "configure-your-project--docs": {
+      "id": "configure-your-project--docs",
+      "title": "Configure your project",
+      "name": "Docs",
+      "importPath": "./src/stories/Configure.mdx",
+      "storiesImports": [],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "unattached-mdx"
+      ]
+    },
+    "pages-aboutpage--docs": {
+      "id": "pages-aboutpage--docs",
+      "title": "pages/AboutPage",
+      "name": "Docs",
+      "importPath": "./src/pages/AboutPage/ui/AboutPage.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "pages-aboutpage--default": {
+      "type": "story",
+      "id": "pages-aboutpage--default",
+      "name": "Default",
+      "title": "pages/AboutPage",
+      "importPath": "./src/pages/AboutPage/ui/AboutPage.stories.tsx",
+      "componentPath": "./src/pages/AboutPage",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "pages-mainpage--docs": {
+      "id": "pages-mainpage--docs",
+      "title": "pages/MainPage",
+      "name": "Docs",
+      "importPath": "./src/pages/MainPage/ui/MainPage.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "pages-mainpage--default": {
+      "type": "story",
+      "id": "pages-mainpage--default",
+      "name": "Default",
+      "title": "pages/MainPage",
+      "importPath": "./src/pages/MainPage/ui/MainPage.stories.tsx",
+      "componentPath": "./src/pages/MainPage",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "pages-notfoundpage--docs": {
+      "id": "pages-notfoundpage--docs",
+      "title": "pages/NotFoundPage",
+      "name": "Docs",
+      "importPath": "./src/pages/NotFoundPage/ui/NotFoundPage.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "pages-notfoundpage--default": {
+      "type": "story",
+      "id": "pages-notfoundpage--default",
+      "name": "Default",
+      "title": "pages/NotFoundPage",
+      "importPath": "./src/pages/NotFoundPage/ui/NotFoundPage.stories.tsx",
+      "componentPath": "./src/pages/NotFoundPage",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-applink--docs": {
+      "id": "shared-applink--docs",
+      "title": "shared/AppLink",
+      "name": "Docs",
+      "importPath": "./src/shared/ui/AppLink/AppLink.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "shared-applink--dark": {
+      "type": "story",
+      "id": "shared-applink--dark",
+      "name": "Dark",
+      "title": "shared/AppLink",
+      "importPath": "./src/shared/ui/AppLink/AppLink.stories.tsx",
+      "componentPath": "./src/shared/ui/AppLink/AppLink.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-button--docs": {
+      "id": "shared-button--docs",
+      "title": "shared/Button",
+      "name": "Docs",
+      "importPath": "./src/shared/ui/Button/Button.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "shared-button--default": {
+      "type": "story",
+      "id": "shared-button--default",
+      "name": "Default",
+      "title": "shared/Button",
+      "importPath": "./src/shared/ui/Button/Button.stories.tsx",
+      "componentPath": "./src/shared/ui/Button/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-button--clear": {
+      "type": "story",
+      "id": "shared-button--clear",
+      "name": "Clear",
+      "title": "shared/Button",
+      "importPath": "./src/shared/ui/Button/Button.stories.tsx",
+      "componentPath": "./src/shared/ui/Button/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-button--clicked": {
+      "type": "story",
+      "id": "shared-button--clicked",
+      "name": "Clicked",
+      "title": "shared/Button",
+      "importPath": "./src/shared/ui/Button/Button.stories.tsx",
+      "componentPath": "./src/shared/ui/Button/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-button--outline": {
+      "type": "story",
+      "id": "shared-button--outline",
+      "name": "Outline",
+      "title": "shared/Button",
+      "importPath": "./src/shared/ui/Button/Button.stories.tsx",
+      "componentPath": "./src/shared/ui/Button/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-loader--docs": {
+      "id": "shared-loader--docs",
+      "title": "shared/Loader",
+      "name": "Docs",
+      "importPath": "./src/shared/ui/Loader/Loader.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "shared-loader--light": {
+      "type": "story",
+      "id": "shared-loader--light",
+      "name": "LIGHT",
+      "title": "shared/Loader",
+      "importPath": "./src/shared/ui/Loader/Loader.stories.tsx",
+      "componentPath": "./src/shared/ui/Loader/Loader.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "shared-themeswitcher--docs": {
+      "id": "shared-themeswitcher--docs",
+      "title": "shared/ThemeSwitcher",
+      "name": "Docs",
+      "importPath": "./src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "shared-themeswitcher--light": {
+      "type": "story",
+      "id": "shared-themeswitcher--light",
+      "name": "LIGHT",
+      "title": "shared/ThemeSwitcher",
+      "importPath": "./src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.stories.tsx",
+      "componentPath": "./src/shared/ui/ThemeSwitcher",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-button--docs": {
+      "id": "example-button--docs",
+      "title": "Example/Button",
+      "name": "Docs",
+      "importPath": "./src/stories/Button.stories.ts",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "example-button--primary": {
+      "type": "story",
+      "id": "example-button--primary",
+      "name": "Primary",
+      "title": "Example/Button",
+      "importPath": "./src/stories/Button.stories.ts",
+      "componentPath": "./src/stories/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-button--secondary": {
+      "type": "story",
+      "id": "example-button--secondary",
+      "name": "Secondary",
+      "title": "Example/Button",
+      "importPath": "./src/stories/Button.stories.ts",
+      "componentPath": "./src/stories/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-button--large": {
+      "type": "story",
+      "id": "example-button--large",
+      "name": "Large",
+      "title": "Example/Button",
+      "importPath": "./src/stories/Button.stories.ts",
+      "componentPath": "./src/stories/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-button--small": {
+      "type": "story",
+      "id": "example-button--small",
+      "name": "Small",
+      "title": "Example/Button",
+      "importPath": "./src/stories/Button.stories.ts",
+      "componentPath": "./src/stories/Button.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-header--docs": {
+      "id": "example-header--docs",
+      "title": "Example/Header",
+      "name": "Docs",
+      "importPath": "./src/stories/Header.stories.ts",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "example-header--logged-in": {
+      "type": "story",
+      "id": "example-header--logged-in",
+      "name": "Logged In",
+      "title": "Example/Header",
+      "importPath": "./src/stories/Header.stories.ts",
+      "componentPath": "./src/stories/Header.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-header--logged-out": {
+      "type": "story",
+      "id": "example-header--logged-out",
+      "name": "Logged Out",
+      "title": "Example/Header",
+      "importPath": "./src/stories/Header.stories.ts",
+      "componentPath": "./src/stories/Header.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "example-page--logged-out": {
+      "type": "story",
+      "id": "example-page--logged-out",
+      "name": "Logged Out",
+      "title": "Example/Page",
+      "importPath": "./src/stories/Page.stories.ts",
+      "componentPath": "./src/stories/Page.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ]
+    },
+    "example-page--logged-in": {
+      "type": "story",
+      "id": "example-page--logged-in",
+      "name": "Logged In",
+      "title": "Example/Page",
+      "importPath": "./src/stories/Page.stories.ts",
+      "componentPath": "./src/stories/Page.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "play-fn"
+      ]
+    },
+    "widget-navbar--docs": {
+      "id": "widget-navbar--docs",
+      "title": "widget/Navbar",
+      "name": "Docs",
+      "importPath": "./src/widgets/Navbar/ui/Navbar.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "widget-navbar--dark": {
+      "type": "story",
+      "id": "widget-navbar--dark",
+      "name": "Dark",
+      "title": "widget/Navbar",
+      "importPath": "./src/widgets/Navbar/ui/Navbar.stories.tsx",
+      "componentPath": "./src/widgets/Navbar/ui/Navbar.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "widget-navbar--light": {
+      "type": "story",
+      "id": "widget-navbar--light",
+      "name": "Light",
+      "title": "widget/Navbar",
+      "importPath": "./src/widgets/Navbar/ui/Navbar.stories.tsx",
+      "componentPath": "./src/widgets/Navbar/ui/Navbar.tsx",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "widget-pageerror--docs": {
+      "id": "widget-pageerror--docs",
+      "title": "widget/PageError",
+      "name": "Docs",
+      "importPath": "./src/widgets/PageError/ui/PageError.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "widget-pageerror--dark": {
+      "type": "story",
+      "id": "widget-pageerror--dark",
+      "name": "Dark",
+      "title": "widget/PageError",
+      "importPath": "./src/widgets/PageError/ui/PageError.stories.tsx",
+      "componentPath": "./src/widgets/PageError",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "widget-pageerror--light": {
+      "type": "story",
+      "id": "widget-pageerror--light",
+      "name": "Light",
+      "title": "widget/PageError",
+      "importPath": "./src/widgets/PageError/ui/PageError.stories.tsx",
+      "componentPath": "./src/widgets/PageError",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "widget-sidebar--docs": {
+      "id": "widget-sidebar--docs",
+      "title": "widget/SideBar",
+      "name": "Docs",
+      "importPath": "./src/widgets/SideBar/ui/SideBar/SideBar.stories.tsx",
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ],
+      "storiesImports": []
+    },
+    "widget-sidebar--dark": {
+      "type": "story",
+      "id": "widget-sidebar--dark",
+      "name": "Dark",
+      "title": "widget/SideBar",
+      "importPath": "./src/widgets/SideBar/ui/SideBar/SideBar.stories.tsx",
+      "componentPath": "./src/widgets/SideBar",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    },
+    "widget-sidebar--light": {
+      "type": "story",
+      "id": "widget-sidebar--light",
+      "name": "Light",
+      "title": "widget/SideBar",
+      "importPath": "./src/widgets/SideBar/ui/SideBar/SideBar.stories.tsx",
+      "componentPath": "./src/widgets/SideBar",
+      "tags": [
+        "dev",
+        "test",
+        "autodocs"
+      ]
+    }
+  }
+}
