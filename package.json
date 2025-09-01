@@ -13,7 +13,8 @@
     "test": "jest",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/.storybook",
-    "build-storybook": "storybook build -c ./config/.storybook"
+    "build-storybook": "storybook build -c ./config/.storybook",
+    "view-test": "storybook build -c ./config/.storybook && npx playwright --config=config/playwright.config.ts test config/tests/visual.spec.ts"
   },
   "keywords": [],
   "author": "",

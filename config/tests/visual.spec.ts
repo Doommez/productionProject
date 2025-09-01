@@ -8,18 +8,28 @@ const stories = Object.values(indexJson.entries)
         (entry: any) => entry.type === 'story'
     );
 const storybookBaseUrl = 'http://localhost:6006';
+
+test.describe.configure({ mode: 'parallel' });
+// eslint-disable-next-line no-restricted-syntax
 for (const story of stories) {
-    // @ts-ignore
-    test(`${story.title} — ${story.name}`, async ({ page }) => {
-        console.log(`${storybookBaseUrl}/iframe.html?id=${story.id}`);
-        // @ts-ignore
-        await page.goto(`${storybookBaseUrl}/iframe.html?id=${story.id}`);
+    test(`${story.title} — ${story.name}`, async ({ page }, testInfo) => {
+        const url = `${storybookBaseUrl}/iframe.html?id=${story.id}`;
+        console.log(testInfo.snapshotDir);
+        // Переходим на страницу сториса
+        await page.goto(url);
 
-        await page.waitForTimeout(1000); // подождём отрисовку
+        // Ждём пока пропадёт индикатор загрузки
+        await page.waitForSelector('.lds-ripple', { state: 'detached', timeout: 10000 });
+        const projectName = test.info().project.name
+            .toLowerCase() // все буквы маленькие
+            .replace(/\s+/g, '-') // пробелы → дефисы
+            .replace(/[^\w-]/g, ''); // убрать все спецсимволы кроме букв, цифр и дефисов
 
+        const snapshotName = `${story.id}-${projectName}.png`;
+        // Делаем скриншот и сравниваем с эталонным
         expect(await page.screenshot())
             // @ts-ignore
-            .toMatchSnapshot(`${story.id}.png`);
+            .toMatchSnapshot();
     });
 }
 // npx playwright test --update-snapshots=all tests/visual.spec.ts
