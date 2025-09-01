@@ -10,7 +10,10 @@ export default defineConfig({
             name: 'Desktop Chrome',
             use: {
                 ...devices['Desktop Chrome'],
-                viewport: { width: 1920, height: 1080 }
+                viewport: {
+                    width: 1920,
+                    height: 1080
+                }
             }
         },
         {
@@ -25,10 +28,11 @@ export default defineConfig({
         baseURL: 'http://localhost:6006', // Storybook dev server
         headless: true
     },
-
+    reporter: 'html',
     expect: {
         toMatchSnapshot: {
             threshold: 0.2 // допустимое отличие в %
         }
     }
+
 });

@@ -9,27 +9,32 @@ const stories = Object.values(indexJson.entries)
     );
 const storybookBaseUrl = 'http://localhost:6006';
 
-test.describe.configure({ mode: 'parallel' });
+// test.describe.configure({ mode: 'parallel' });
 // eslint-disable-next-line no-restricted-syntax
 for (const story of stories) {
-    test(`${story.title} — ${story.name}`, async ({ page }, testInfo) => {
+    test(`${story.title} — ${story.name}`, async ({ page }) => {
         const url = `${storybookBaseUrl}/iframe.html?id=${story.id}`;
-        console.log(testInfo.snapshotDir);
         // Переходим на страницу сториса
         await page.goto(url);
-
         // Ждём пока пропадёт индикатор загрузки
-        await page.waitForSelector('.lds-ripple', { state: 'detached', timeout: 10000 });
-        const projectName = test.info().project.name
-            .toLowerCase() // все буквы маленькие
-            .replace(/\s+/g, '-') // пробелы → дефисы
-            .replace(/[^\w-]/g, ''); // убрать все спецсимволы кроме букв, цифр и дефисов
+        await page.waitForTimeout(3000);
+        await page.waitForSelector('.lds-ripple', {
+            state: 'hidden',
+            timeout: 10000
+        });
+        // const projectName = test.info()
+        //     .project
+        //     .name
+        //     .toLowerCase() // все буквы маленькие
+        //     .replace(/\s+/g, '-') // пробелы → дефисы
+        //     .replace(/[^\w-]/g, ''); // убрать все спецсимволы кроме букв, цифр и дефисов
 
-        const snapshotName = `${story.id}-${projectName}.png`;
+        const snapshotName = `${story.id}.png`;
+
         // Делаем скриншот и сравниваем с эталонным
-        expect(await page.screenshot())
+        await expect(page)
             // @ts-ignore
-            .toMatchSnapshot();
+            .toHaveScreenshot(snapshotName, { fullPage: true });
     });
 }
 // npx playwright test --update-snapshots=all tests/visual.spec.ts
@@ -40,3 +45,24 @@ for (const story of stories) {
 //     missing — создать только отсутствующие (в твоём случае, чтобы первый раз записать).
 //
 // none — не трогать снапшоты.
+
+// test('Check screenshot of existing storybook', async ({ page }) => {
+//     const storybookConfig = await (await page.request.get('http://localhost:6006/index.json'))
+//         .json();
+//     const storybooks = Object.keys(storybookConfig.entries)
+//         .filter((entry) => storybookConfig.entries[entry].type === 'story');
+//     // eslint-disable-next-line no-restricted-syntax
+//     for (const story of storybooks) {
+//         const url = `${storybookBaseUrl}/iframe.html?id=${story}`;
+//
+//         await page.goto(url);
+//         await expect(page.locator('#storybook-root'))
+//             .toBeVisible();
+//         await expect(page.locator('.sb-preparing-story .sb-loader'))
+//             .not
+//             .toBeVisible();
+//         await page.waitForTimeout(500);
+//         await expect(page)
+//             .toHaveScreenshot(`${story}.png`, { fullPage: true });
+//     }
+// });
