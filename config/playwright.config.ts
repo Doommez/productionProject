@@ -33,6 +33,11 @@ export default defineConfig({
         toMatchSnapshot: {
             threshold: 0.2 // допустимое отличие в %
         }
+    },
+    webServer: {
+        command: 'npm run storybook',
+        port: 6006,
+        reuseExistingServer: !process.env.CI
     }
 
 });
