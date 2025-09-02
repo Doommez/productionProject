@@ -32,5 +32,5 @@ jobs:
       - name: unit testing
         run: npm run unit
       - name: view tests
-        run: npm run view-test
+        run: npm run view-test:ci
 
