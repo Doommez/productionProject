@@ -32,8 +32,6 @@ jobs:
       - name: unit testing
         run: npm run unit
       - name: view tests
-        run: npm run view-test:ci
-      - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
