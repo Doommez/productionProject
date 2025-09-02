@@ -12,7 +12,6 @@ const App = () => {
     return (
 
         <div className={classNames('app', {}, [theme])}>
-            asd
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
