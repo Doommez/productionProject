@@ -16,6 +16,13 @@ for (const story of stories) {
         const url = `${storybookBaseUrl}/iframe.html?id=${story.id}`;
         // Переходим на страницу сториса
         await page.goto(url);
+        await page.evaluate(async () => {
+            // @ts-ignore
+            await document.fonts.ready;
+            document.fonts.forEach((fontFace) => {
+                console.log(fontFace.family, fontFace.status);
+            });
+        });
         // Ждём пока пропадёт индикатор загрузки
         await page.waitForTimeout(3000);
         await page.waitForSelector('.lds-ripple', {
