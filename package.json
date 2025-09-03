@@ -16,7 +16,10 @@
     "build-storybook": "storybook build -c ./config/.storybook",
     "view-test:ci": "storybook build -c ./config/.storybook && npx playwright test -c config/playwright.config.ts config/tests/visual.spec.ts",
     "screen-diff": "npx playwright test -c config/playwright.config.ts config/tests/visual.spec.ts",
-    "screen-diff-update": "npx playwright test --update-snapshots=all -c config/playwright.config.ts config/tests/visual.spec.ts\n"
+    "screen-diff-update": "npx playwright test --update-snapshots=all -c config/playwright.config.ts config/tests/visual.spec.ts\n",
+    "docker:build": "docker build -t visual-tests .",
+    "test:update-snapshots": "docker run --rm -it -v $(pwd):/tests visual-tests npx playwright test --update-snapshots=all -c config/playwright.config.ts config/tests/visual.spec.ts",
+    "test:visual": "docker run --rm -it -v $(pwd):/tests visual-tests npx playwright test -c config/playwright.config.ts config/tests/visual.spec.ts"
   },
   "keywords": [],
   "author": "",
