@@ -5,6 +5,7 @@ services:
       - "9323:9323"
     volumes:
       - ./test-results:/tests/test-results
+      - ./playwright-report:/tests/playwright-report
       - ./config/tests/visual.spec.ts-snapshots:/tests/config/tests/visual.spec.ts-snapshots
     working_dir: /tests
     environment:
