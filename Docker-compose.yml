@@ -1,0 +1,10 @@
+services:
+  vue-test:
+    build: .
+    volumes:
+      - ./test-results:/tests/test-results
+      - ./config/tests/visual.spec.ts-snapshots:/tests/config/tests/visual.spec.ts-snapshots
+    working_dir: /tests
+    environment:
+      BROWSER: none
+      STORYBOOK_DISABLE_TELEMETRY: "1"

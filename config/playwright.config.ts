@@ -37,8 +37,7 @@ export default defineConfig({
     },
     webServer: {
         command: 'npm run storybook',
-        port: 6006,
+        url: 'http://localhost:6006',
         reuseExistingServer: !process.env.CI
     }
-
 });
