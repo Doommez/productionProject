@@ -6,3 +6,5 @@
 *storybook.log
 storybook-static
 /playwright-report
+/test-report
+/test-results

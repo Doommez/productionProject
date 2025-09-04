@@ -1,6 +1,8 @@
 services:
   vue-test:
     build: .
+    ports:
+      - "9323:9323"
     volumes:
       - ./test-results:/tests/test-results
       - ./config/tests/visual.spec.ts-snapshots:/tests/config/tests/visual.spec.ts-snapshots
