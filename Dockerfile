@@ -15,4 +15,4 @@ RUN npm ci
 RUN npm run build-storybook
 
 # По умолчанию запускаем Playwright
-CMD ["npx", "playwright","test", "--update-snapshots=all", "-c", "config/playwright.config.ts","config/tests/visual.spec.ts"]
+CMD ["npx", "playwright","test", "--update-snapshots=changed", "-c", "config/playwright.config.ts","config/tests/visual.spec.ts"]
