@@ -3,7 +3,7 @@ import 'app/styles/index.scss';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ThemeButton } from './Button';
 
 const meta = {
     title: 'shared/Button',
@@ -16,12 +16,20 @@ const meta = {
         themeButton: {
             control: 'select',
             options: Object.values(ThemeButton)
-
         },
         children: {
             control: 'text'
         },
-        onClick: { action: 'clicked' }
+        onClick: { action: 'clicked' },
+        size: {
+            control: 'select',
+            options: Object.values(ButtonSize)
+        },
+        square: {
+            control: 'select',
+            options: [true, false]
+        }
+
     },
     decorators: [ThemeDecorator(Theme.LIGHT)]
 } satisfies Meta<typeof Button>;
@@ -43,18 +51,20 @@ export const Clear: Story = {
 };
 export const Clicked: Story = {
     args: {
-        children: 'кнопка',
-        onClick: () => {
-            console.log('asdf');
-        }
+        children: 'кнопка'
+
     }
 };
 export const Outline: Story = {
     args: {
         children: 'кнопка',
-        themeButton: ThemeButton.OUTLINE,
-        onClick: () => {
-            console.log('asdf');
-        }
+        themeButton: ThemeButton.OUTLINE
+    }
+};
+
+export const Size: Story = {
+    args: {
+        children: 'кнопка',
+        size: ButtonSize.XL
     }
 };

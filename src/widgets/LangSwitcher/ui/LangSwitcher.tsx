@@ -6,9 +6,13 @@ import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
     className?: string;
+    short?: boolean;
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({
+                                                        className,
+                                                        short
+                                                    }) => {
     const {
         t,
         i18n
@@ -23,7 +27,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
             className={classNames(cls.LangSwitcher, {}, [className])}
             onClick={toggle}
         >
-            {t('Язык')}
+            {t(short ? 'короткийЯзык' : 'Язык')}
         </Button>
     );
 };
