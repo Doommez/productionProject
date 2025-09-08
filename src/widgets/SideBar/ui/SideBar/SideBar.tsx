@@ -5,6 +5,8 @@ import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ui/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import MainIcon from 'shared/assets/icons/Vector.svg';
+import AboutIcon from 'shared/assets/icons/clarity_list-outline-badged.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './SideBar.module.scss';
 
@@ -45,10 +47,23 @@ export const SideBar: FC<SideBarProps> = ({ className }) => {
                     to={RoutePath.main}
                     className={cls.item}
                 >
-                    {t('Главная')}
+                    <MainIcon className={cls.icon} />
+                    <span className={cls.link}>
+                        {t('Главная')}
+
+                    </span>
                 </AppLink>
-                <AppLink theme={AppLinkTheme.RED} to={RoutePath.about} className={cls.item}>
-                    {t('О сайте')}
+
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.about}
+                    className={cls.item}
+                >
+                    <AboutIcon className={cls.icon} />
+                    <span className={cls.link}>
+                        {t('О сайте')}
+
+                    </span>
                 </AppLink>
             </div>
 
