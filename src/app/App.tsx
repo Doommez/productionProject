@@ -20,9 +20,14 @@ const App = () => {
                     setIsOpen(((prev) => !prev));
                 }}
                 >
-asdfasdf
+                    asdfasdf
                 </button>
-                <Modal isOpen={isOpen} />
+                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                    cum distinctio et laboriosam laborum nemo perferendis quidem, tenetur. Deserunt
+                    praesentium, voluptatibus! Asperiores illum in ipsa iste, laborum molestiae quo
+                    saepe?
+                </Modal>
                 <div className="content-page">
                     <SideBar />
 
