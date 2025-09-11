@@ -49,6 +49,14 @@ export const Clear: Story = {
         themeButton: ThemeButton.CLEAR
     }
 };
+
+export const ClearInverted: Story = {
+    args: {
+        children: 'кнопка',
+        themeButton: ThemeButton.CLEAR_INVERTED
+    }
+};
+
 export const Clicked: Story = {
     args: {
         children: 'кнопка'
