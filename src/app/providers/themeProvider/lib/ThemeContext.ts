@@ -1,10 +1,8 @@
 import { createContext } from 'react';
 
 export enum Theme {
-    // eslint-disable-next-line no-unused-vars
-    LIGHT = 'light',
-    // eslint-disable-next-line no-unused-vars
-    DARK = 'dark',
+    LIGHT = 'app_light_theme',
+    DARK = 'app_dark_theme',
 }
 
 export interface ThemeContextProps {
