@@ -23,11 +23,11 @@ export const Counter: FC<CounterProps> = ({ className }) => {
     };
     return (
         <div className={classNames(cls.Counter, {}, [className])}>
-            <h1>{counterValue}</h1>
-            <Button onClick={increment}>
+            <h1 data-testid="value-title">{counterValue}</h1>
+            <Button data-testid="increment-button" onClick={increment}>
                 +
             </Button>
-            <Button onClick={decrement}>
+            <Button data-testid="decrement-button" onClick={decrement}>
                 -
             </Button>
         </div>
