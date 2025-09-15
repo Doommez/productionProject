@@ -3,7 +3,7 @@
 exports[`Button snapshot test Button snapshot 1`] = `
 <div>
   <div
-    class="app light"
+    class="app app_light_theme"
   >
     <button
       class="Button undefined"
