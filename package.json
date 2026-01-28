@@ -19,7 +19,8 @@
     "screen-diff-update": "npx playwright test --update-snapshots=all -c config/playwright.config.ts config/tests/visual.spec.ts\n",
     "docker:build": "docker compose build vue-test",
     "screen-diff:ci": "docker compose run -p 9323:9323 --rm vue-test npx playwright test show-report ./playwright-report -c config/playwright.config.ts config/tests/visual.spec.ts",
-    "screen-diff-update:ci": "docker compose run -p 9323:9323 --rm vue-test npx playwright test --update-snapshots=changed -c config/playwright.config.ts config/tests/visual.spec.ts"
+    "screen-diff-update:ci": "docker compose run -p 9323:9323 --rm vue-test npx playwright test --update-snapshots=changed -c config/playwright.config.ts config/tests/visual.spec.ts",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -60,6 +61,7 @@
     "eslint-plugin-storybook": "^9.0.18",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
+    "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.0.4",
