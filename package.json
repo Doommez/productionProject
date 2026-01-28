@@ -18,8 +18,8 @@
     "screen-diff": "npx playwright test -c config/playwright.config.ts config/tests/visual.spec.ts",
     "screen-diff-update": "npx playwright test --update-snapshots=all -c config/playwright.config.ts config/tests/visual.spec.ts\n",
     "docker:build": "docker compose build vue-test",
-    "screen-diff:ci": "npm run docker:build && docker compose run -p 9323:9323 --rm vue-test npx playwright test show-report ./playwright-report -c config/playwright.config.ts config/tests/visual.spec.ts",
-    "screen-diff-update:ci": "npm run docker:build && docker compose run -p 9323:9323 --rm vue-test npx playwright test --update-snapshots=changed -c config/playwright.config.ts config/tests/visual.spec.ts"
+    "screen-diff:ci": "docker compose run -p 9323:9323 --rm vue-test npx playwright test show-report ./playwright-report -c config/playwright.config.ts config/tests/visual.spec.ts",
+    "screen-diff-update:ci": "docker compose run -p 9323:9323 --rm vue-test npx playwright test --update-snapshots=changed -c config/playwright.config.ts config/tests/visual.spec.ts"
   },
   "keywords": [],
   "author": "",

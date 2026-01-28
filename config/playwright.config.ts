@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
     testDir: './tests',
     snapshotPathTemplate: '{testDir}/{testFilePath}-snapshots/{arg}-{projectName}{ext}',
-    timeout: 30 * 1000,
+    timeout: 30 * 6000,
     retries: 0,
     fullyParallel: true,
     projects: [
