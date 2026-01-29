@@ -76,3 +76,11 @@ export const Size: Story = {
         size: ButtonSize.XL
     }
 };
+
+export const Disabled: Story = {
+    args: {
+        children: 'кнопка',
+        size: ButtonSize.XL,
+        disabled: true
+    }
+};

@@ -1,7 +1,7 @@
 export interface User {
     id: number;
     name: string;
-    login: string;
+    username: string;
     createdAt: string;
     updateAt: string;
     // roles: Role[]
@@ -10,5 +10,4 @@ export interface User {
 
 export interface UserSchema {
     authData?: User;
-
 }

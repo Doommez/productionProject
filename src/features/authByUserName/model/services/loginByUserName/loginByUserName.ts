@@ -7,18 +7,18 @@ interface LoginByUserNameProps {
     password: string;
 }
 
-export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps>(
+export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rejectValue : string}>(
     'login/loginByUserName',
     async (authData, { rejectWithValue }) => {
         try {
-            const response = await axios.post<User>('localhost:4000/auth/login', authData);
+            const response = await axios.post<User>('http://localhost:4000/auth/login', authData);
           if (!response.data) {
               throw new Error('Unable to sign in');
           }
           return response.data;
         } catch (error) {
             console.log(error);
-           return rejectWithValue(error);
+           return rejectWithValue(error.message);
         }
     }
 );
