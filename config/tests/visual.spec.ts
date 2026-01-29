@@ -41,7 +41,7 @@ for (const story of stories) {
         // Делаем скриншот и сравниваем с эталонным
         await expect(page)
             // @ts-ignore
-            .toHaveScreenshot(snapshotName, { fullPage: true });
+            .toHaveScreenshot(snapshotName);
     });
 }
 // npx playwright test --update-snapshots=all tests/visual.spec.ts
