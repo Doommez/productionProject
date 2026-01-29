@@ -29,9 +29,6 @@ for (const story of stories) {
             state: 'hidden',
             timeout: 10000
         });
-
-        const root = page.locator('#storybook-root');
-
         // const projectName = test.info()
         //     .project
         //     .name
@@ -42,7 +39,7 @@ for (const story of stories) {
         const snapshotName = `${story.id}.png`;
 
         // Делаем скриншот и сравниваем с эталонным
-        await expect(root)
+        await expect(page)
             // @ts-ignore
             .toHaveScreenshot(snapshotName);
     });
