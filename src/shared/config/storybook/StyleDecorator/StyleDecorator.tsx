@@ -1,9 +1,10 @@
 import 'app/styles/index.scss';
 
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
+import css from './StyleDecorator.module.scss';
 
-export const StyleDecorator = (Story: () => ReactNode) => (
-    <div style={{ width: '800px' }}>
+export const StyleDecorator = (style?: CSSProperties) => (Story: () => ReactNode) => (
+    <div style={style} className={css.StyleDecorator}>
         <Story />
     </div>
 );

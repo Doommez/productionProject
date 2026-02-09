@@ -31,10 +31,9 @@ export const loginSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload;
             })
-            .addCase(loginByUserName.fulfilled, (state, action) => {
+            .addCase(loginByUserName.fulfilled, (state) => {
                 state.isLoading = false;
                 state.error = null;
-                state.username = action.payload.username;
             });
     }
 });

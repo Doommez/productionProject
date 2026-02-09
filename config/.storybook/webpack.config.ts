@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import { BuildPath } from '../build/type/config';
 import path from 'path';
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders';
+import { WebpackDefinePlugin } from '@storybook/builder-webpack5';
 
 export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPath = {
@@ -33,5 +34,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
         paths: undefined,
         port: 0
     }));
+
+    config.plugins.push( new WebpackDefinePlugin({
+        __IS_DEV: true,
+    }))
     return config;
 }

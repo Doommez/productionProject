@@ -1,7 +1,7 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { loginReducer } from 'features/authByUserName/model/slice/LoginSlice';
+import { loginReducer } from 'features/authByUserName';
 import { StateSchema } from './StateShema';
 
 export function createReduxStore(initialState?: StateSchema) {

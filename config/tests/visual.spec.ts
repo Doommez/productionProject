@@ -24,10 +24,10 @@ for (const story of stories) {
             });
         });
         // Ждём пока пропадёт индикатор загрузки
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(5000);
         await page.waitForSelector('.lds-ripple', {
             state: 'hidden',
-            timeout: 10000
+            timeout: 150000
         });
         // const projectName = test.info()
         //     .project

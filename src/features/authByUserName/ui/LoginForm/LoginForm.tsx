@@ -5,9 +5,8 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/reduxHooks';
-import {
-    loginByUserName
-} from '../../model/services/loginByUserName/loginByUserName';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { loginActions } from '../../model/slice/LoginSlice';
 import cls from './LoginForm.module.scss';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
@@ -43,8 +42,9 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
+            <Text title={t('Форма авторизации')} />
             {
-                error && <div>{error}</div>
+                error && <Text text={error} theme={TextTheme.ERROR} />
             }
             <Input
                 autoFocus

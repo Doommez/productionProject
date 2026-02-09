@@ -3,6 +3,7 @@ import 'app/styles/index.scss';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
 
 const meta = {
@@ -13,7 +14,15 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {},
-    decorators: [ThemeDecorator(Theme.LIGHT)]
+    decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({
+            user: {
+                authData: {
+                    name: 'test',
+                    id: 1,
+                    username: 'testName'
+                }
+            }
+    })]
 } satisfies Meta<typeof Navbar>;
 
 export default meta;

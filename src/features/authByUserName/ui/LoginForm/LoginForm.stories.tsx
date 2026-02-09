@@ -4,6 +4,7 @@ import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
 import { LoginForm } from 'features/authByUserName/ui/LoginForm/LoginForm';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'feature/LoginForm',
@@ -13,12 +14,15 @@ const meta = {
     },
     tags: ['autodocs'],
 
-    decorators: [ThemeDecorator(Theme.LIGHT)]
+    decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({
+        loginForm: {
+            username: 'test',
+            password: 'test'
+        }
+    })]
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-
-};
+export const Default: Story = {};
