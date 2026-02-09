@@ -6,6 +6,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/reduxHooks';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import I18n from 'shared/config/i18n/i18n';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { loginActions } from '../../model/slice/LoginSlice';
 import cls from './LoginForm.module.scss';
@@ -21,8 +22,8 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
     const {
         username,
         password,
-        error,
-        isLoading
+        isLoading,
+        error
     } = useSelector(getLoginState);
 
     const onChangeUsername = useCallback((value: string) => {
@@ -44,7 +45,7 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Text title={t('Форма авторизации')} />
             {
-                error && <Text text={error} theme={TextTheme.ERROR} />
+                error && <Text text={I18n.t('Неверный вход')} theme={TextTheme.ERROR} />
             }
             <Input
                 autoFocus

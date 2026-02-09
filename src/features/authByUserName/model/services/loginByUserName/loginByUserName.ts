@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { User, userActions } from 'entities/User';
-import I18n from 'shared/config/i18n/i18n';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage/localstorage';
 
 interface LoginByUserNameProps {
@@ -22,7 +21,7 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rej
           return response.data;
         } catch (error) {
             console.error(error);
-           return rejectWithValue(I18n.t('Неверный вход'));
+           return rejectWithValue(error);
         }
     }
 );
