@@ -24,9 +24,8 @@ function buildPlugins({
         }),
         new ReactRefreshWebpackPlugin()
     ];
-
+    plugins.push(new BundleAnalyzerPlugin());
     if (isDev) {
-        plugins.push(new BundleAnalyzerPlugin());
         plugins.push(new webpack.HotModuleReplacementPlugin());
     }
 

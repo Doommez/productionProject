@@ -3,7 +3,7 @@ import 'app/styles/index.scss';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/themeProvider';
-import { LoginForm } from 'features/authByUserName/ui/LoginForm/LoginForm';
+import LoginForm from 'features/authByUserName/ui/LoginForm/LoginForm';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import i18n from 'shared/config/i18n/i18n';
 
