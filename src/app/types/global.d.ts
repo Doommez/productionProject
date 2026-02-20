@@ -19,3 +19,9 @@ declare module '*.svg' {
 
 // eslint-disable-next-line no-unused-vars
 declare const __IS_DEV: boolean;
+
+declare type DeepPartial<T> = {
+    [K in keyof T]?: T[K] extends object
+        ? DeepPartial<T[K]>
+        : T[K];
+};

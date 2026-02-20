@@ -59,7 +59,8 @@ module.exports = {
         'no-param-reassign': 'off'
     },
     globals: {
-        __IS_DEV: true
+        __IS_DEV: true,
+        DeepPartial: false,
     },
     overrides: [
         {
